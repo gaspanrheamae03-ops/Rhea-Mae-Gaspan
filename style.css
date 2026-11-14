@@ -1,0 +1,49 @@
+
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    background: #f8f5ed;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: #243b32;
+    color: white;
+    padding: 30px;
+}
+
+.daily-verse {
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+.daily-verse p {
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.bible-reader {
+    margin: 30px;
+}
+
+button {
+    background: #243b32;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3b5b49;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+}
