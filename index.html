@@ -1,40 +1,31 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holy Bible App</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Holy Bible | Read • Search • Reflect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header>
-        <h1>📖 Holy Bible</h1>
-        <p>Read God's Word Every Day</p>
-    </header>
-
-    <main>
-        <section class="daily-verse">
-            <h2>Verse of the Day</h2>
-            <p id="verse">
-                "The Lord is my shepherd;
-                I shall not want."
-            </p>
-            <strong>Psalm 23:1</strong>
-        </section>
-
-        <section class="bible-reader">
-            <h2>Start Reading</h2>
-            <p>Explore the Word of God.</p>
-            <button onclick="readBible()">Read Bible</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 Holy Bible App</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<header class="topbar"><a class="brand" href="#"><span class="cross">✝</span><span><b>Holy Bible</b><small>Read • Search • Reflect</small></span></a>
+<nav><button id="themeBtn" class="icon-btn" title="Toggle theme">☾</button><button id="loginBtn" class="btn outline">Log in</button><button id="logoutBtn" class="btn outline hidden">Log out</button></nav></header>
+<section class="hero"><div class="hero-inner"><p class="eyebrow">YOUR DAILY SCRIPTURE</p><h1>Find wisdom in<br>every chapter.</h1><p id="heroStatus">A quiet place to read, search, and reflect on God's Word.</p></div></section>
+<main>
+<section class="testaments">
+<article class="testament old"><div class="circle">✡<small>OLD<br>TESTAMENT</small></div><div><p class="eyebrow">39 BOOKS</p><h2>Old Testament</h2><p>The Law · History · Psalms · Prophets</p><small>Explore Genesis to Malachi.</small></div></article>
+<article class="testament new"><div class="circle">☧<small>NEW<br>TESTAMENT</small></div><div><p class="eyebrow">27 BOOKS</p><h2>New Testament</h2><p>The Gospels · Acts · Letters · Revelation</p><small>Explore Matthew to Revelation.</small></div></article>
+</section>
+<section class="reader-controls">
+<div class="field"><label for="book">Book</label><select id="book"></select></div><div class="field"><label for="chapter">Chapter</label><select id="chapter"></select></div><div class="field"><label for="translation">Translation</label><select id="translation"><option value="kjv">King James Version (KJV)</option><option value="web">World English Bible (WEB)</option></select></div>
+<div class="search-row"><input id="searchInput" placeholder="Search Bible words or verses…"><button class="btn primary" id="searchBtn">Search</button></div>
+</section>
+<section class="reader">
+<div class="reader-toolbar"><button id="prev" class="btn outline">← Previous</button><button id="next" class="btn outline">Next →</button><button id="smaller" class="btn outline">A−</button><button id="larger" class="btn outline">A+</button><button id="readBtn" class="btn outline">🔊 Read chapter</button><button id="stopBtn" class="btn outline">■ Stop audio</button></div>
+<div class="chapter-head"><div><h3 id="chapterTitle">Genesis 1</h3><p id="chapterMeta">Old Testament · KJV</p></div><span id="progress">1 / 66 books</span></div>
+<div id="verses" class="verses"><p class="loading">Choose a book and chapter to begin.</p></div>
+</section>
+<section class="reflection"><h3>✦ Personal Reflection</h3><p>Write a thought, prayer, or lesson from today's reading.</p><textarea id="notes" placeholder="What stood out to you today?"></textarea><button id="saveNote" class="btn primary">Save reflection</button><span id="noteStatus"></span></section>
+<footer>Made for quiet moments with Scripture · Your reflections stay in this browser unless you sign in and connect a database.</footer>
+</main>
+<div id="authModal" class="modal hidden"><div class="modal-card"><button class="close" id="closeModal">×</button><h2>Welcome back</h2><p>Sign in to your Holy Bible account.</p><input id="email" type="email" placeholder="Email address"><input id="password" type="password" placeholder="Password (6+ characters)"><button id="emailLogin" class="btn primary full">Sign in</button><button id="emailSignup" class="btn outline full">Create account</button><p id="authMessage"></p><small>Authentication needs your Firebase config in <code>app.js</code>.</small></div></div>
+<script type="module" src="app.js"></script></body></html>
